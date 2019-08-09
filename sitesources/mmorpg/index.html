@@ -1,49 +1,54 @@
 <html>
     <head>
         <title>For the alliance</title>
+        <link rel="stylesheet" type="text/css" href="index.css"></link>
     </head>
     <body>
-        <form>
-            <div>
-                <h5>Nome do personagem:</h5>
-                <input type="text" name="nomepersonagem">
-            </div>
-            <div>
-                <h5>Cidade:</h5>
-                <select name="cidade">
-                    <option>Thais</option>
-                    <option>Carlin</option>
-                    <option>Venore</option>
-                </select>
-            </div>
-            <div>
-                <h5>Classe:</h5>
-                <select name="classe">
-                    <option>Guerreiro</option>
-                    <option>Arqueiro</option>
-                    <option>Mago</option>
-                </select>
-            </div>
-            <div>
-                <h5>Sexo:</h5>
+        <div class="mainDiv">
+            <form>
                 <div>
-                    <input type="radio" name="sexo" id="masculino">
-                    <label for="masculino">Masculino</label>
+                    <h5>Nome do personagem:</h5>
+                    <input type="text" name="nome">
                 </div>
                 <div>
-                    <input type="radio" name="sexo" id="feminino">
-                    <label for="feminino">Feminino</label>
+                    <h5>Cidade:</h5>
+                    <select name="cidade">
+                        <option>Thais</option>
+                        <option>Carlin</option>
+                        <option>Venore</option>
+                    </select>
                 </div>
                 <div>
-                    <input type="radio" name="sexo" id="indefinido">
-                    <label for="indefinido">Indefinido</label>
+                    <h5>Classe:</h5>
+                    <select name="classe">
+                        <option>Guerreiro</option>
+                        <option>Arqueiro</option>
+                        <option>Mago</option>
+                    </select>
                 </div>
-            </div>
-            </br>
-            <div>
-                <input type="checkbox" name="tutorial" id="tutorial">
-                <label for="tutorial">Deseja realizar o tutorial?</label>
-            </div>
-        </form>
+                <div>
+                    <h5>Sexo:</h5>
+                    <div class="noMarginDiv">
+                        <input type="radio" name="sexo" id="masculino" class="checks">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="noMarginDiv">
+                        <input type="radio" name="sexo" id="feminino" class="checks">
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    <div class="noMarginDiv">
+                        <input type="radio" name="sexo" id="indefinido" class="checks">
+                        <label for="indefinido">Indefinido</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="tutorial" id="tutorial" class="checks">
+                    <label for="tutorial">Deseja realizar o tutorial?</label>
+                </div>
+                <div>
+                    <input type="submit" id="criarButton" value="Criar personagem" formaction="https://venson.net.br/ws/unesc/cadastro.php" class="criarButton">
+                </div>
+            </form>
+        </div>
     </body>
 </html>
