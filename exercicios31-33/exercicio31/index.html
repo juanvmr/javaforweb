@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de itens</title>
+    </head>
+    <body>
+        <form action="http://localhost:8080/" method="get">
+            <input type="text" name="itemName" id="itemName">
+            <input type="button" name="addButton" id="addButton" value="Adicionar">
+            <input type="submit" name="sendButton" value="Enviar" id="sendButton">
+        </form>
+        <ul id="itemList">
+        </ul>
+        <script>
+            function process(){
+                let lista = document.getElementById("itemList");
+                let item = document.getElementById("itemName");
+                let listaItem = document.createElement("li");
+                listaItem.textContent = item.value;
+                lista.appendChild(listaItem);
+            }
+            let button = document.getElementById("addButton");
+            button.onclick = process;
+        </script>
+    </body>
+</html>
