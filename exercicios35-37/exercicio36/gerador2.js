@@ -1,6 +1,6 @@
 var express = require("express")
 var app = express()
-express.json()
+app.use(express.json())
 
 app.set('json replacer', function(key, value){
     if(key == "idade"){
