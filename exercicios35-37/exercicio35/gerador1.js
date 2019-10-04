@@ -1,6 +1,6 @@
 var express = require("express")
 var app = express()
-express.json()
+app.use(express.json())
 
 app.get("/gerador", function(req, res){
         var String
