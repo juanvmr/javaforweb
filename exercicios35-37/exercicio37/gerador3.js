@@ -1,7 +1,7 @@
 var express = require("express")
 var fileManager = require("fs")
 var app = express()
-express.json()
+app.use(express.json())
 
 app.post("/jogador", function(req, res, err){
     if(!err){
