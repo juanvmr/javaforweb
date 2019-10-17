@@ -3,7 +3,7 @@ var Champion = require("../models/Champion")
 var router = express.Router()
 router.use(express.json())
 
-router.get("/:id", function(req, res){
+router.get("/search/:id", function(req, res){
     var id = req.params.id
     var limiter = req.params.limiter
     var filter = req.params.filter
@@ -35,8 +35,9 @@ router.get("/:id", function(req, res){
             }
         })
     }
-
 })
+
+
 
 router.post("/add", function(req, res){
     var champion = new Champion({
