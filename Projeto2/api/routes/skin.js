@@ -1,6 +1,5 @@
 var express = require("express")
 var Skin = require("../models/Skin")
-var Champion = require("../models/Champion")
 var router = express.Router()
 router.use(express.json())
 
@@ -8,11 +7,7 @@ router.get("/search", function(req, res){
     var filter = ({
         limiter : req.params.limiter,
         id : req.params.id,
-        name : req.params.name,
-        championSkin : new Champion({
-            _id : req.params.championSkinId,
-            name : req.params.championSkinName
-        })
+        name : req.params.name
     })
 
     if(filter.id){
@@ -37,19 +32,6 @@ router.get("/search", function(req, res){
                         return name === filter.name
                     }))
                 }
-                else if(filter.championSkin){
-                    var filterChampionSkinId = filter.championSkin.championSkinId
-                    var filterChampionSkinName = filter.championSkin.championSkinName
-                    if(filterChampionSkinId){
-                        res.status(200).json(skin.find(Champion.find(filterChampionSkinId)))
-                    }
-                    else if(filterChampionSkinName){
-                        Champion.find(function())
-                        res.status(200).json(skin.championSkin.filter(function(filterChampionSkin){
-                            return filterChampionSkin.name === skin.championSkin.championSkinName
-                        }))
-                    }
-                }
                 else{
                     res.status(200).json(skin)
                 }
@@ -64,21 +46,20 @@ router.get("/search", function(req, res){
 
 router.post("/add", function(req, res){
     var skin = new Skin({
-        name : req.params.name,
-        skinOwn : req.params.skinOwn
+        name : req.params.name
     })
     skin.save(function(err, doc){
         if(!err){
             res.status(201).json(doc)
         }
         else{
-            res.status(400).json("Erro ao cadastrar o skin")
+            res.status(400).json("Erro ao cadastrar skin")
         }
     })
 })
 
 router.put("/update/:id", function(req, res){
-    Skin.findByIdAndUpdate(req.params.id, { name : req.params.name, skinOwn : req.params.skinOwn}, function(err, skin){
+    Skin.findByIdAndUpdate(req.params.id, { name : req.params.name}, function(err, skin){
         if(!err){
             console.log("Skin atualizado")
             res.status(200).json(skin)
