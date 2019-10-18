@@ -3,7 +3,7 @@ const champion = require("../models/Champion")
 
 var lolSkin = new mongoose.Schema({
     name : String,
-    championOwn : champion
+    championSkin : champion
 })
 
 var Skin = mongoose.model("Skin", lolSkin)

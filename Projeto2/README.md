@@ -1,9 +1,7 @@
                                                     LoLzinho
 
 Projeto de cadastro de elementos do League of Legends, para a disciplina de Java para Web.
-
 Inclui cadastro de jogador, de skins, de campeões, de espólios e de itens utilizáveis dentro do jogo.
 
-Desenvolvido usando Node.js, em uma api REST.
-
+Desenvolvido usando Node.js, em uma api RESTful.
 Não inclui front-end.
