@@ -1,0 +1,17 @@
+{
+  "name": "projetofinalbackend",
+  "version": "1.0.0",
+  "description": "Backend do projeto final de JPW",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "nodemon index.js"
+  },
+  "author": "Juan Victor May da Rosa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13",
+    "nodemon": "^2.0.1"
+  }
+}
