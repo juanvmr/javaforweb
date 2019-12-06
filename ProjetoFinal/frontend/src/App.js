@@ -1,9 +1,9 @@
 import React from 'react';
-import LoLLogin from './components/LoLLogin'
+import LoLPage from './components/LoLPage'
 
 function App() {
   return (
-    <LoLLogin/>
+    <LoLPage/>
   );
 }
 
