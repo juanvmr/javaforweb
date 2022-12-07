@@ -10,7 +10,7 @@
   "author": "Juan Victor May da Rosa",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.7.13",
     "nodemon": "^2.0.1"
   }
